@@ -7,14 +7,8 @@ typedef struct Arraylist
 
 //Functions
 void init(ARRLST *pal);
-int append(ARRLST *pal,int e)
-
-delLast();
-display();
-prepend();
-deletefront();
-insertposition();
-deleteposition();
-getter();
-setter();
-
+int append(ARRLST *pal,int e);
+int delLast(ARRLST *pal,int *ele);
+void display(ARRLST *pal);
+int prepend(ARRLST *pal,int ele);
+int deletefront(ARRLST *pal,int* ele);
