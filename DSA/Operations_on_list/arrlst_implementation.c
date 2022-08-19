@@ -55,3 +55,44 @@ int deletefront(ARRLST *pal,int* ele)
     return 1;
 }
 
+int insertposition(ARRLST *pal,int ele,int pos)
+{
+    if(pal->index==MAX-1) return 0;
+    for(int i=pal->index;i>=pos;i--)
+    {
+        pal->a[i+1]=pal->a[i];
+    }
+    pal->a[pos]=ele;
+    pal->index++;
+    return 1;
+}
+
+
+int deleteposition(ARRLST *pal,int ele,int pos)
+{
+    if(pal->index==-1) return 0;
+    ele=pal->a[pos];
+    for(int i=pos+1;i<=pal->index;i++)
+    {
+        pal->a[i-1]=pal->a[i];
+    }
+    pal->index--;
+}
+
+int getter(ARRLST *pal,int pos,int ele)
+{
+    if(pal->index==-1) return 0;
+    ele=pal->a[pos];
+    return 1;
+
+}
+
+int setter(ARRLST *pal,int pos,int ele)
+{
+    if(pal->index==-1) return 0;
+    pal->a[pos]=ele;
+    return 1;
+}
+
+
+
