@@ -12,3 +12,7 @@ int delLast(ARRLST *pal,int *ele);
 void display(ARRLST *pal);
 int prepend(ARRLST *pal,int ele);
 int deletefront(ARRLST *pal,int* ele);
+int insertposition(ARRLST *pal,int ele,int pos);
+int deleteposition(ARRLST *pal,int ele,int pos);
+int getter(ARRLST *pal,int pos,int ele);
+int setter(ARRLST *pal,int pos,int ele);
