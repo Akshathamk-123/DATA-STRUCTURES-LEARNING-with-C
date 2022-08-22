@@ -75,7 +75,7 @@ int main()
                 }
                 else
                 {
-                    printf("%d is successfully inserted at %",ele,pos);
+                    printf("%d is successfully inserted at %d",ele,pos);
                 }
                 break;
             case 7:
