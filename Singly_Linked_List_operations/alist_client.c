@@ -128,16 +128,20 @@ int main()
                     printf("Successful deletion of %d",ele);
                 }
                 break;
-            /*
             case 9: //9)Count the number of nodes
+                k=noofnodes(&al);
+                printf("Number of nodes in the list is %d",k);
                 break;
+            /*
             case 10://10)Move nth node backward by m positions from the beginning
                 break;
             case 11://11)Move mth node forward by n positions from the beginning
                 break;
-            case 12://12)Merge two ordered List
+            
+            case 12://12)Merge two ordered List 
                 break;
             */
+            
         }
     } while (choice); 
 }
