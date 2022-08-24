@@ -11,7 +11,7 @@ int main()
     do
     {
         //The loop for asking the User what operations to do
-        printf("\n 1)Insert in the front of the list \n 2)Delete in the front \n 3)Display\n 4)Delete from the last\n 5)Insert from the last\n 6)Insert in the given position\n 7)Delete at the given position\n 8)Delete the given element\n 9)Count the number of nodes\n 10)Move nth node backward by m positions from the beginning\n 11)Move mth node foward by n positions from the beginning\n 12)Merge two ordered List");
+        printf("\n 1)Insert in the front of the list \n 2)Delete in the front \n 3)Display\n 4)Delete from the last\n 5)Insert from the last\n 6)Insert in the given position\n 7)Delete at the given position\n 8)Delete the given element\n 9)Count the number of nodes\n 10)Move nth node backward by m positions from the beginning\n 11)Move mth node foward by n positions from the beginning\n 12)Merge two ordered List\n");
         //The choice is taken from the user and stored in the variable choice
         printf("Enter your choice");
         scanf("%d",&choice);
@@ -73,12 +73,21 @@ int main()
                 {
                     printf("The last node %d Successfully deleted.",ele);    
                 }
+                break;
             case 5://5)Insert from the last
                 //The element entered will be will be stored in the variable ele
                 //The ele has the input which has to be inserted to the end of the list 
                 printf("Enter the element to be Inserted");
                 scanf("%d",&ele);
                 k=insertLast(&al,ele);
+                if(k==0)
+                {
+                    printf("Unsuccessful");
+                }
+                else
+                {
+                    printf("Successfully inserted %d at the end");
+                }
                 break;
             case 6://6)Insert at the given position
                 printf("Enter the position at which you wan to insert and the element itself");
@@ -99,11 +108,11 @@ int main()
                 k=deleteposition(&al,pos,&ele);
                 if(k==0)
                 {
-                    printf("The list is either empty or the position entered is invalid");
+                    printf("The list is either empty or the position entered is invalid\n");
                 }
                 else
                 {
-                    printf("The element %d is deleted from %d",ele,pos);
+                    printf("The element %d is deleted from %d\n",ele,pos);
                 }
                 break;
             case 8:// 8)Delete the given element
@@ -119,8 +128,8 @@ int main()
                     printf("Successful deletion of %d",ele);
                 }
                 break;
+            /*
             case 9: //9)Count the number of nodes
-                
                 break;
             case 10://10)Move nth node backward by m positions from the beginning
                 break;
@@ -128,6 +137,7 @@ int main()
                 break;
             case 12://12)Merge two ordered List
                 break;
+            */
         }
     } while (choice); 
 }
