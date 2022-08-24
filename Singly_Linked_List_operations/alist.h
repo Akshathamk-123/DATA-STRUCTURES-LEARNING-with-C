@@ -18,11 +18,11 @@ int insertLast(LLIST *pl,int ele);//case 5
 int insertposition(LLIST *pl,int pos,int ele);//case 6
 int deleteposition(LLIST *pl,int pos,int *ele);//case  7
 int deletegivenele(LLIST *pl,int given);//case 8
+int noofnodes(LLIST *pl);//case 9
 /*
 //Not done yet
 int movembackwardbynfrombeg(LLIST *pl, int m,int n);//case 10 
 int create();//Just a funtion not a part of the switch case
-int noofnodes(LLIST *pl);//case 9
 int movemforwardbynfrombeg(LLIST *pl, int m,int n);//case 11
 int mergeol(LLIST *pl1,LLIST *pl2);//case 12
 
