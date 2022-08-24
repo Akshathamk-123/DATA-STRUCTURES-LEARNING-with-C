@@ -246,3 +246,155 @@ int deletegivenele(LLIST *pl,int given)
     }
     return 1;
 }
+
+
+
+
+
+
+
+
+//Counting the number of nodes
+//The function is called in case 9:
+//working status:NOT WRITTEN 
+int noofnodes(LLIST *pl)
+{
+    NODE *p;
+    int cnt=1;
+    p=pl->head;
+    if(p==NULL)
+    {
+        cnt=0;
+    }
+    else
+    {
+         while(p->next!=NULL)
+    {
+        p=p->next;
+        cnt++;
+    }
+    }
+   
+    return cnt;
+}
+
+
+
+
+/*
+//Move nth node backward by m positions from the beginning
+//The function is called in case 10:
+//working status:NOT WORKING HAVE TO WORK ON
+int movembackwardbynfrombeg(LLIST *pl, int m,int n)
+{
+    NODE *p,*q,*r;
+    NODE *s;
+    p=pl->head;
+    q=pl->head;
+    r=pl->head;
+    int cnt=1;
+    if(p==NULL) return 0;
+    while(cnt<m-1)
+    {
+        p=p->next;
+        q=q->next;
+        r=r->next;
+        cnt++;
+    }
+    while(cnt<n-1)
+    {
+        q=q->next;
+        r=r->next;
+        cnt++;
+    }
+    q=q->next;
+    s=p->next;
+    p->next=s->next;
+    r->next=q->next;
+    q->next=s;
+}
+
+
+
+
+
+
+//Move mth node foward by n positions from the beginning
+//The function is called in case 11:
+//working status:NOT WRITTEN 
+int movemforwardbynfrombeg(LLIST *pl, int m,int n)
+{
+
+}
+
+
+
+
+
+
+//Merging the two ordered list
+//The function is called in case 1:
+//working status:WORKING BUT HAVE TO WORK ON THE CREATION OF THE LISTS
+int mergeol(LLIST *pl1,LLIST *pl2)
+{
+    NODE *p=pl1->head;
+    NODE *q=pl2->head;
+    LLIST *pl3;
+    NODE *r;
+    while(p!=NULL && q!=NULL)
+    {
+        temp=(NODE *)malloc(sizeof(NODE));
+        temp->next=NULL;
+        if(p->info<q->info)
+        {temp->info=p->info;p=p->next;}
+        else
+        {
+            temp->info=q->info;q=q->next;
+    
+        }
+        r=pl3->head;
+
+        if(r==NULL)
+        {
+            pl3->head=temp;
+        }
+        else{
+            while(r->next!=NULL)
+            r=r->next;
+            r->next=temp;
+        }
+    }
+    while(q!=NULL)
+    {
+        temp=(NODE* )malloc(sizeof(NODE));
+        temp->next=NULL;
+        temp->info=q->info;q=q->next;
+        r=pl3->head;
+        if(r==NULL)
+        {
+            pl3->head=temp;
+        }
+        else{
+            while(r->next!=NULL)
+            r=r->next;
+            r->next=temp;
+        }
+    }
+        while(p!=NULL)
+    {
+        temp=(NODE* )malloc(sizeof(NODE));
+        temp->next=NULL;
+        temp->info=q->info;p=p->next;
+        r=pl3->head;
+        if(r==NULL)
+        {
+            pl3->head=temp;
+        }
+        else{
+            while(r->next!=NULL)
+            r=r->next;
+            r->next=temp;
+        }
+    }
+}
+*/
