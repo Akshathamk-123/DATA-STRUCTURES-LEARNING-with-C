@@ -18,7 +18,7 @@ typedef struct tree
 3) Postorder
 All of the above are done in a recursive manner
 */
-
+//This is BST
 /*PREORDER
 1)visit the root (V)
 2)Traverse the LST in Preorder
